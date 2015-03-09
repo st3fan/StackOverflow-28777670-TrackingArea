@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7A73DB16-D611-4AAE-9446-B26FFDF108DB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TrackingArea</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>42452B662D81EC3D1B96B54603AB4582E4393DFE</key>
+		<string>github.com:st3fan/StackOverflow.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>28777670-TrackingArea/TrackingArea.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>42452B662D81EC3D1B96B54603AB4582E4393DFE</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:st3fan/StackOverflow.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>42452B662D81EC3D1B96B54603AB4582E4393DFE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>42452B662D81EC3D1B96B54603AB4582E4393DFE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>StackOverflow</string>
+		</dict>
+	</array>
+</dict>
+</plist>
