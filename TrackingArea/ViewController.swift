@@ -13,7 +13,7 @@ private enum DrawerPosition {
 }
 
 private let DrawerHeightWhenDown: CGFloat = 16
-private let DrawerAnimationDuration: NSTimeInterval = 0.75
+private let DrawerAnimationDuration: TimeInterval = 0.75
 
 class ViewController: NSViewController {
     
@@ -24,12 +24,10 @@ class ViewController: NSViewController {
         
         // Remove the auto-constraints for the image view otherwise we are not able to change its position
         view.removeConstraints(view.constraints)
-        drawerView.frame = frameForDrawerAtPosition(.Down)
+        drawerView.frame = frameForDrawerAtPosition(position: .Down)
 
-        let trackingArea = NSTrackingArea(rect: drawerView.bounds,
-            options: NSTrackingAreaOptions.ActiveInKeyWindow|NSTrackingAreaOptions.MouseEnteredAndExited,
-                owner: self, userInfo: nil)
-        drawerView.addTrackingArea(trackingArea)
+        let trackingArea = NSTrackingArea(rect: CGRect(x: 0, y: 0, width: 120, height: 300), options: [NSTrackingArea.Options.activeAlways ,NSTrackingArea.Options.mouseEnteredAndExited], owner: self, userInfo: nil)
+        view.addTrackingArea(trackingArea)
     }
     
     private func frameForDrawerAtPosition(position: DrawerPosition) -> NSRect {
@@ -45,17 +43,17 @@ class ViewController: NSViewController {
         return frame
     }
     
-    override func mouseEntered(event: NSEvent) {
+    override func mouseEntered(with: NSEvent) {
         NSAnimationContext.runAnimationGroup({ (context: NSAnimationContext!) in
             context.duration = DrawerAnimationDuration
-            self.drawerView.animator().frame = self.frameForDrawerAtPosition(.Up)
+            self.drawerView.animator().frame = self.frameForDrawerAtPosition(position: .Up)
         }, completionHandler: nil)
     }
     
-    override func mouseExited(theEvent: NSEvent) {
+    override func mouseExited(with: NSEvent) {
         NSAnimationContext.runAnimationGroup({ (context: NSAnimationContext!) in
             context.duration = DrawerAnimationDuration
-            self.drawerView.animator().frame = self.frameForDrawerAtPosition(.Down)
+            self.drawerView.animator().frame = self.frameForDrawerAtPosition(position: .Down)
         }, completionHandler: nil)
     }
 }
